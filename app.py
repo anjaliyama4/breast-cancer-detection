@@ -4,6 +4,7 @@ import html
 from datetime import datetime
 
 import joblib
+import numpy as np
 import pandas as pd
 import streamlit as st
 from reportlab.platypus import (
@@ -141,10 +142,7 @@ if uploaded_file is not None:
             )
             st.stop()
 
-        if not patient_data.map(
-            lambda value: pd.notna(value)
-            and abs(value) != float("inf")
-        ).all().all():
+        if not np.isfinite(patient_data.to_numpy()).all():
             st.error("The CSV contains infinite or invalid values.")
             st.stop()
 
