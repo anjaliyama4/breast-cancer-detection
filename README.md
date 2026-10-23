@@ -2,6 +2,7 @@
 
 An AI-powered 🧠 machine learning web application that predicts breast cancer classifications using a **Random Forest Classifier**. Built with Python and Streamlit, it provides interactive predictions, CSV data uploads, and downloadable PDF reports.
 
+
 ## ✨ Features
 
 - 🤖 **Machine Learning:** Random Forest classification using the Wisconsin Breast Cancer dataset.
@@ -131,3 +132,7 @@ This project is intended **for educational and demonstration purposes only**. It
 ---
 
 ⭐ If you find this project interesting, consider giving the repository a star!
+
+## 📸 Application Preview
+
+![Breast Cancer Detection App](screenshot.png)
