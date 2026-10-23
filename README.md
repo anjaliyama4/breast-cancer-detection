@@ -1,140 +1,133 @@
-# Breast Cancer Detection & Risk Assessment System
+# 🎗️ Breast Cancer Detection & Risk Assessment System
 
-## 📌 Project Overview
-
-The **Breast Cancer Detection & Risk Assessment System** is a machine learning project built with Python and Streamlit. It uses a Random Forest classification model trained on the Wisconsin Breast Cancer dataset to classify tumor measurements as **benign or malignant**.
-
-The application provides an interactive interface where users can upload CSV files containing tumor measurements, view model predictions, and generate downloadable PDF reports.
-
-> **Disclaimer:** This project is intended for educational purposes only. It is not a clinically validated medical diagnostic tool and must not be used to make medical decisions.
-
-## 🎯 Objectives
-
-- Apply machine learning techniques to a classification problem.
-- Train and evaluate a Random Forest model.
-- Build an interactive web interface using Streamlit.
-- Process CSV files containing tumor measurements.
-- Generate downloadable PDF prediction reports.
-
-## 🛠️ Technologies Used
-
-- **Programming Language:** Python
-- **Machine Learning:** scikit-learn, Random Forest
-- **Data Processing:** Pandas, NumPy
-- **Web Application:** Streamlit
-- **Model Serialization:** Joblib
-- **PDF Generation:** ReportLab
-- **Version Control:** Git and GitHub
+An AI-powered 🧠 machine learning web application that predicts breast cancer classifications using a **Random Forest Classifier**. Built with Python and Streamlit, it provides interactive predictions, CSV data uploads, and downloadable PDF reports.
 
 ## ✨ Features
 
-- Machine learning model training and evaluation.
-- CSV upload for tumor measurement data.
-- Benign or malignant classification predictions.
-- Prediction confidence display.
-- Downloadable PDF reports.
-- Sample patient CSV files for testing the application.
+- 🤖 **Machine Learning:** Random Forest classification using the Wisconsin Breast Cancer dataset.
+- 📂 **CSV Upload:** Upload patient feature data for analysis.
+- ✅ **Input Validation:** Detects missing columns, invalid values, and incomplete data.
+- 📊 **Prediction Results:** Displays predicted classifications and model probability estimates.
+- 📄 **PDF Reports:** Generate and download prediction reports.
+- 🖥️ **Interactive Web App:** Simple, user-friendly interface powered by Streamlit.
+- 🧪 **Automated Testing:** Pytest tests help verify model functionality.
+- ⚙️ **Continuous Integration:** GitHub Actions automatically runs tests on code changes.
 
-## 📂 Project Structure
+## 🛠️ Tech Stack
+
+| Technology | Purpose |
+|---|---|
+| 🐍 Python | Core programming language |
+| 🌐 Streamlit | Web application interface |
+| 🧠 scikit-learn | Machine learning model |
+| 🐼 pandas | Data processing |
+| 🔢 NumPy | Numerical operations |
+| 📦 joblib | Model serialization |
+| 📑 ReportLab | PDF report generation |
+| 🧪 pytest | Automated testing |
+| 🔄 GitHub Actions | Continuous integration |
+
+## 📁 Project Structure
 
 ```text
 breast-cancer-detection/
-├── app.py
-├── train_model.py
-├── create_patient_file.py
-├── breast_cancer_model.pkl
-├── requirements.txt
-└── sample_patients/
-    ├── patient_001.csv
-    ├── patient_002.csv
-    └── ...
+├── 📄 app.py
+├── 🧠 train_model.py
+├── 📦 breast_cancer_model.pkl
+├── 📄 create_patient_file.py
+├── 📋 requirements.txt
+├── 🧪 tests/
+│   └── test_app.py
+├── 📂 sample_patients/
+├── ⚙️ .github/
+│   └── workflows/
+│       └── tests.yml
+└── 📘 README.md
 ```
 
-## ⚙️ Installation and Setup
+## 🚀 Getting Started
 
-### 1. Clone the repository
+### 📌 Prerequisites
+
+- Python installed
+- Git installed
+
+### 1️⃣ Clone the Repository
 
 ```bash
 git clone https://github.com/anjaliyama4/breast-cancer-detection.git
-```
-
-### 2. Open the project folder
-
-```bash
 cd breast-cancer-detection
 ```
 
-### 3. Create a virtual environment (recommended)
-
-```bash
-python -m venv .venv
-```
-
-Activate it on Windows PowerShell:
-
-```powershell
-.\.venv\Scripts\Activate.ps1
-```
-
-### 4. Install dependencies
+### 2️⃣ Install Dependencies
 
 ```bash
 python -m pip install -r requirements.txt
 ```
 
-### 5. Run the application
+### 3️⃣ Run the Application
 
 ```bash
 python -m streamlit run app.py
 ```
 
-The application should open in your browser. If it does not, open the local URL shown in the terminal.
+Open the local URL displayed in your terminal to use the application. 🎉
 
-## 🧠 Model Training and Evaluation
+## 🧪 Run Automated Tests
 
-The `train_model.py` script trains a Random Forest classifier using the Wisconsin Breast Cancer dataset from scikit-learn.
+Install pytest if needed:
 
-The training script includes:
+```bash
+python -m pip install pytest
+```
 
-- Loading the dataset.
-- Splitting data into training and testing sets.
-- Training a Random Forest classifier.
-- Evaluating the model using accuracy, a classification report, and a confusion matrix.
-- Saving the trained model as `breast_cancer_model.pkl`.
+Run the tests:
 
-To train the model again, run:
+```bash
+python -m pytest -v
+```
+
+✅ Automated tests are also configured through GitHub Actions.
+
+## 🧠 Train the Model
+
+To retrain the Random Forest classifier:
 
 ```bash
 python train_model.py
 ```
 
-Use the actual results from your training run when documenting model performance. No accuracy or other performance values are claimed here.
+The trained model is saved as `breast_cancer_model.pkl`.
 
-## 📊 Using the Application
+## 📊 Model Evaluation
 
-1. Start the Streamlit application.
-2. Enter the requested patient information.
-3. Upload a CSV file containing the required tumor measurement features.
-4. Review the prediction and confidence displayed by the application.
-5. Download the generated PDF report if needed.
+The training script evaluates the model using classification metrics, including:
 
-Use the provided sample CSV files to test the application.
+- 🎯 Accuracy
+- 📈 ROC-AUC
+- 📋 Classification report
+- 🔍 Confusion matrix
+
+*Run the training script to obtain the current evaluation results. Metrics may vary depending on the dataset and training configuration.*
 
 ## 🔮 Future Improvements
 
-- Add precision, recall, F1-score, and ROC-AUC visualizations.
-- Compare Random Forest with other classification algorithms.
-- Add automated unit and integration tests.
-- Improve input validation and error handling.
-- Add a confusion matrix visualization to the interface.
-- Deploy the application for an online demonstration.
+- 📈 Add interactive visualizations for prediction results.
+- 🧩 Improve test coverage for CSV validation and PDF generation.
+- ☁️ Deploy the application online.
+- 🎨 Enhance the user interface and accessibility.
+- 🔐 Add stronger privacy protections for uploaded patient data.
+
+## ⚠️ Medical Disclaimer
+
+This project is intended **for educational and demonstration purposes only**. It is not a medical device and must not be used to diagnose cancer or make treatment decisions. Predictions may be incorrect and should never replace professional medical advice.
 
 ## 👩‍💻 Author
 
 **Anjali Yama**
 
-GitHub: [anjaliyama4](https://github.com/anjaliyama4)
+🔗 [GitHub Profile](https://github.com/anjaliyama4)
 
-## 📄 License
+---
 
-This project is available for educational and learning purposes. Add a license file if you want to specify formal reuse and distribution terms.
+⭐ If you find this project interesting, consider giving the repository a star!
